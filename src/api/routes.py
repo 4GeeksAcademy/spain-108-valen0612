@@ -15,3 +15,6 @@ CORS(api)# Allow CORS requests to this API
 def handle_hello():
     response_body = { "message": "Hello! I'm a message that came from the backend"}
     return response_body, 200
+
+
+@api.route ('/users' , methods=[''])
