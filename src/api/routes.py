@@ -17,4 +17,9 @@ def handle_hello():
     return response_body, 200
 
 
-@api.route ('/users' , methods=[''])
+@api.route ('/users' , methods=['POST' , 'GET'])
+def users():
+    reponse_body = {}
+    if request.method == 'GET':
+        reponse_body['message'] = 'listado de usuarios'
+        return reponse_body, 200
